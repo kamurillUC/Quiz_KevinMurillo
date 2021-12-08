@@ -1,0 +1,50 @@
+<div class="container">
+  <table>
+    <caption>Autores</caption>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Cedula</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Fecha Nacimiento</th>
+        <th>Género Primario</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let autor of autors; let i = index;">
+      <tr>
+        <td>{{i+1}}</td>
+        <td>{{autor.cedula}}</td>
+        <td>{{autor.nombre}}</td>
+        <td>{{autor.apellido}}</td>
+        <td>{{autor.fechaNacimiento | date: 'yyyy/MM/dd'}}</td>
+        <td>{{autor.generoPrincipal}}</td>
+        <td><button (click)="onVerLibrosAutor(i)" type="button">Ver libros</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  
+  <table>
+    <caption>Libros del autor: {{this.autorSeleccionado.nombre}}</caption>
+    <thead>
+      <tr>
+        <th>#</th>        
+        <th>Nombre</th>
+        <th>Año de creación</th>     
+        <th>Género</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let libro of this.librosAutor; let i = index;">
+      <tr>
+        <td>{{i+1}}</td>        
+        <td>{{libro.nombre}}</td>
+        <td>{{libro.annoCreacion}}</td>
+        <td>{{libro.generoLibro}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

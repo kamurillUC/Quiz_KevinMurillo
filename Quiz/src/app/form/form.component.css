@@ -1,0 +1,15 @@
+.container {    
+    border-radius: 16px;
+    border-color: gray;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+

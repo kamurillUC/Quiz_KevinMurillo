@@ -1,0 +1,38 @@
+<div class="container">
+
+  <div class="form-container">
+    <h3>Autor</h3>
+    <div class="divider"></div>
+    Nombre: <input type="text" placeholder="Nombre" [(ngModel)]="autor.nombre" />
+    <br><br>
+    Apellido: <input type="text" placeholder="Apellido" [(ngModel)]="autor.apellido" />
+    <br><br>
+    Cédula: <input type="text" placeholder="Cedula" [(ngModel)]="autor.cedula" />
+    <br><br>
+    Fecha de Nacimiento: <input type="date" placeholder="date" [(ngModel)]="autor.fechaNacimiento" />
+    <br><br>
+    Género Literario Primario:
+    <select name="generoPrincipal" [(ngModel)]="autor.generoPrincipal">
+      <option [value]="genero" *ngFor="let genero of generos">{{genero}}</option>
+    </select>
+    <br><br>
+    <button (click)="onSubmitAuthor()" type="button">Registrar Autor</button>
+  </div>
+
+  <div class="form-container">
+    <h3>Libro</h3>
+    <div class="divider"></div>
+    Nombre: <input type="text" placeholder="Nombre" [(ngModel)]="libro.nombre" />
+    <br><br>
+    Año de creación: <input type="text" placeholder="Año de creación" [(ngModel)]="libro.annoCreacion" />
+    <br><br>
+    Género: <input type="text" placeholder="Género" [(ngModel)]="libro.generoLibro" />
+    <br><br>  
+    Autor:
+    <select name="autores" [(ngModel)]="libro.cedulaAutor">
+      <option [value]="autor.cedula" *ngFor="let autor of listaAutores">{{autor.nombre}} {{autor.apellido}}</option>
+    </select>
+    <br><br> 
+    <button (click)="onSubmitBook()" type="button">Registrar Libro</button>    
+  </div>
+</div>

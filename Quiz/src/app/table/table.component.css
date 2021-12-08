@@ -1,0 +1,21 @@
+table {  
+  border-collapse: collapse;  
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  justify-content: center;  
+  border-radius: 16px;
+  border-color: gray;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
